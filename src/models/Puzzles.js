@@ -1,4 +1,5 @@
 import Http from '../services/Http';
+import {message} from 'antd';
 
 export default {
     namespace:'puzzles',
@@ -43,6 +44,7 @@ export default {
                     payload: data
                 })
             }catch(err){
+                message.error(err.msg);
                 console.log(err);
             }
 

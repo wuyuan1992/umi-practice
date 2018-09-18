@@ -5,19 +5,23 @@ export default {
         routes:[
             {
                 path: 'hello',
-                component: './Hello.js'
+                component: './Hello'
             },
             {
                 path: 'puzzles',
-                component: './Puzzles.js',
+                component: './Puzzles',
             },
             {
                 path:'dashboard',
                 routes:[
-                    { path: 'analyze', component:'Dashboard/Analyze.js' },
-                    { path: 'monitor', component:'Dashboard/Monitor.js' },
-                    { path: 'workplace', component:'Dashboard/WorkPlace.js' }
+                    { path: 'analyze', component:'Dashboard/Analyze' },
+                    { path: 'monitor', component:'Dashboard/Monitor' },
+                    { path: 'workplace', component:'Dashboard/WorkPlace' }
                 ]
+            },
+            {
+                path:'list',
+                component: './List/index'
             }
         ],
     }],

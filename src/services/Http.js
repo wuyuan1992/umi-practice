@@ -1,22 +1,27 @@
+import axios from 'axios';
+
 export default class Http{
     static get(url){
-        return new Promise((resolve, reject)=>{
-            console.log(url);
-            let data= [
+        return new Promise(async (resolve, reject)=>{
+            // console.log(url);
+            const random_puzzles = [
                 {
-                    id: 1,
-                    setup: '1111111',
-                    punchline: '22222'
-                },{
-                    id: 2,
-                    setup: 'aaaaaaa',
-                    punchline: 'dddddddd'
-                }
-            ];
+                  setup: 'What is the object oriented way to get wealthy ?',
+                    punchline: 'Inheritance',
+                },
+                {
+                  setup: 'To understand what recursion is...',
+                  punchline: "You must first understand what recursion is",
+                },
+                {
+                  setup: 'What do you call a factory that sells passable products?',
+                  punchline: 'A satisfactory',
+                },
+              ];
 
-            setTimeout(()=>{
-                resolve(data);
-            }, 3000)
+            // let data = await axios.get('/dev/random_puzzles');
+            // console.log(data);
+            resolve(random_puzzles);
         })
     }
 }
