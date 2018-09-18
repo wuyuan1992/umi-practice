@@ -1,7 +1,25 @@
 export default {
     routes: [{
         path: '/',
-        component: './Hello'
+        component: '../layout/Home',
+        routes:[
+            {
+                path: 'hello',
+                component: './Hello.js'
+            },
+            {
+                path: 'puzzles',
+                component: './Puzzles.js',
+            },
+            {
+                path:'dashboard',
+                routes:[
+                    { path: 'analyze', component:'Dashboard/Analyze.js' },
+                    { path: 'monitor', component:'Dashboard/Monitor.js' },
+                    { path: 'workplace', component:'Dashboard/WorkPlace.js' }
+                ]
+            }
+        ],
     }],
 
     
@@ -9,7 +27,8 @@ export default {
         [
             'umi-plugin-react', 
             {
-                antd:true
+                antd:true,
+                dva: true
             }
         ]
     ],
