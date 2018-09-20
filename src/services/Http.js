@@ -19,7 +19,7 @@ export default class Http{
                 },
               ];
 
-            // let data = await axios.get('/dev/random_puzzles');
+            let data = await axios.get('/dev/random_puzzles');
             // console.log(data);
             resolve(random_puzzles);
         })

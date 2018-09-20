@@ -27,7 +27,7 @@ const mapDispatchToProps = (dispatch)=>{
 
 @connect(mapStateToProps, mapDispatchToProps)
 
-export default class Puzzles extends Component{
+export default class extends Component{
 
     componentDidMount(){
         this.props.onDidMount();

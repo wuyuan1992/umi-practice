@@ -18,7 +18,7 @@ export default {
             let data = payload.map((el, index)=>{
                 return {
                     ...el,
-                    counter: index+1
+                    id: index+1
                 }
             });
             let counter = data.length;
